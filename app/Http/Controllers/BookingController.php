@@ -23,7 +23,7 @@ class BookingController extends Controller
     }
 
     public function save(Request $request){
-        //echo $request;
+        //echo $request
         $addbooking = new Booking(); 
         $addbooking->id_user = Auth::id();
         $addbooking->id_room = $request->input('room_id');

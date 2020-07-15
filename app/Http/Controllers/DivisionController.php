@@ -42,6 +42,7 @@ class DivisionController extends Controller
         return redirect('division/');
     }
 
+    //ini function delete
     public function actiondelete($id){
         $deletedatadivision = Division::find($id);
         $deletedatadivision->status = false;
