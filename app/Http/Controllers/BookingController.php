@@ -36,12 +36,14 @@ class BookingController extends Controller
         return redirect('booking/');
     }
 
+    //ini function update
     public function update($id){
         $getdatabooking = Booking::find($id);
         $getdataroom = Room::all();
         return view('booking/formupdate', ['dataroom' => $getdataroom, 'databooking' => $getdatabooking]);
     }
 
+    //ini function action update
     public function actionupdate(Request $request){
         $updatedatabooking = Booking::find($request->input('id'));
         $updatedatabooking->id_room = $request->input('room_id');
