@@ -36,6 +36,7 @@ class BookingController extends Controller
         return redirect('booking/');
     }
 
+    //ini function update
     public function update($id){
         $getdatabooking = Booking::find($id);
         $getdataroom = Room::all();
